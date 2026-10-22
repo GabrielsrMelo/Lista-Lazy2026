@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.listaslazy2026.screens.GamesScreen
 import com.example.listaslazy2026.ui.theme.ListasLazy2026Theme
 
 class MainActivity : ComponentActivity() {
@@ -20,28 +21,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             ListasLazy2026Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                    GamesScreen()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ListasLazy2026Theme {
-        Greeting("Android")
     }
 }
