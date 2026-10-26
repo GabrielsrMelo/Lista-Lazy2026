@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.listaslazy2026.screens.GamesScreen
 import com.example.listaslazy2026.ui.theme.ListasLazy2026Theme
 
@@ -21,7 +22,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             ListasLazy2026Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    GamesScreen()
+                    GamesScreen(modifier = Modifier.padding(innerPadding))
+                }
             }
         }
     }
